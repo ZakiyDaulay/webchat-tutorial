@@ -92,13 +92,10 @@ impl Component for Chat {
                             .iter()
                             .map(|u| UserProfile {
                                 name: u.into(),
-                                avatar: format!(
-                                    "https://avatars.dicebear.com/api/adventurer-neutral/{}.svg",
-                                    u
-                                )
-                                    .into(),
+                                avatar: "https://robohash.org/2a09:bac5:3a24:88c::da:e3.png".to_string(),
                             })
                             .collect();
+
                         return true;
                     }
                     MsgTypes::Message => {
